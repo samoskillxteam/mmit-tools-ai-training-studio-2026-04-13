@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Real Cost Audit Calculator — MMIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}body{background:#1a1a2e;font-family:'Inter',sans-serif;color:#fff;min-height:100vh;padding:20px}.container{max-width:680px;margin:0 auto}.mmit-header{text-align:center;padding:24px 0 20px;border-bottom:1px solid #3a3a5c;margin-bottom:24px}.mmit-logo{color:#f0c040;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.mmit-header h1{color:#fff;font-size:22px;font-weight:700;margin:8px 0 4px}.module-label{color:#aaaacc;font-size:13px}.mmit-footer{text-align:center;color:#aaaacc;font-size:13px;padding:24px 0;border-top:1px solid #3a3a5c;margin-top:24px}.card{background:#252545;border:1px solid #3a3a5c;border-radius:12px;padding:20px;margin-bottom:16px}.card h2{color:#f0c040;font-size:16px;font-weight:600;margin-bottom:12px}label{display:block;color:#aaaacc;font-size:14px;font-weight:500;margin-bottom:6px}input[type=number]{width:100%;background:#1a1a2e;border:1px solid #3a3a5c;border-radius:8px;color:#fff;padding:10px 14px;font-size:15px;font-family:inherit;margin-bottom:14px}input:focus{outline:none;border-color:#f0c040}.result{background:#1a1a2e;border:2px solid #f0c040;border-radius:12px;padding:20px;text-align:center;margin:16px 0}.result-value{color:#f0c040;font-size:36px;font-weight:700}.result-label{color:#aaaacc;font-size:14px;margin-top:4px}.btn{display:inline-block;background:#f0c040;color:#1a1a2e;border:none;border-radius:8px;padding:12px 24px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}.btn:hover{background:#ffd060}</style></head>
+<body><div class="container">
+<div class="mmit-header"><span class="mmit-logo">MMIT</span><h1>Real Cost Audit Calculator</h1><p class="module-label">Module 1 — The AI Training Revolution</p></div>
+<div id="tool-content">
+<div class="card"><h2>Per-Module Costs</h2>
+<label>Vendor fee per module ($)</label><input type="number" id="vendor" value="22000" oninput="calc()">
+<label>Internal review hours per module</label><input type="number" id="hours" value="40" oninput="calc()">
+<label>Hourly loaded rate ($)</label><input type="number" id="rate" value="75" oninput="calc()">
+<label>Revision/change-order cost per module ($)</label><input type="number" id="revision" value="2500" oninput="calc()">
+</div>
+<div class="card"><h2>Annual Volume</h2>
+<label>Modules produced per year</label><input type="number" id="modules" value="12" oninput="calc()">
+<label>Number of languages required</label><input type="number" id="languages" value="4" oninput="calc()">
+</div>
+<div class="result"><div class="result-label">Real Cost Per Module</div><div class="result-value" id="perModule">$0</div></div>
+<div class="result"><div class="result-label">Annual Baseline Production Budget</div><div class="result-value" id="annual">$0</div></div>
+<div class="result"><div class="result-label">Projected Annual Saving with AI Production</div><div class="result-value" id="saving">$0</div><div class="result-label" id="interpretation" style="margin-top:8px;font-size:13px;color:#4caf82;"></div></div>
+<div style="text-align:center;margin-top:16px"><button class="btn" onclick="window.print()">Print Summary</button> <button class="btn" style="background:#3a3a5c;color:#fff" onclick="reset()">Reset</button></div>
+</div>
+<div class="mmit-footer">Part of The AI Training Studio — Available on Whop · mmit</div>
+</div>
+<script>
+function fmt(n){return '$'+Math.round(n).toLocaleString('en-US')}
+function calc(){
+  const v=+document.getElementById('vendor').value||0,h=+document.getElementById('hours').value||0,
+  r=+document.getElementById('rate').value||0,rev=+document.getElementById('revision').value||0,
+  m=+document.getElementById('modules').value||0,l=+document.getElementById('languages').value||1;
+  const perMod=v+(h*r)+rev;const langCost=l>1?(l-1)*1500:0;const perModTotal=perMod+langCost;
+  const annual=perModTotal*m;const aiCostPerMod=3200;const aiAnnual=aiCostPerMod*m;const saving=annual-aiAnnual;
+  document.getElementById('perModule').textContent=fmt(perModTotal);
+  document.getElementById('annual').textContent=fmt(annual);
+  document.getElementById('saving').textContent=fmt(saving);
+  const pct=annual>0?Math.round((saving/annual)*100):0;
+  document.getElementById('interpretation').textContent=saving>0?
+  'At AI production cost of ~'+fmt(aiCostPerMod)+'/module, you save '+pct+'% annually. ROI: '+Math.round((saving/aiAnnual)*100)+'%':'';
+}
+function reset(){document.getElementById('vendor').value=22000;document.getElementById('hours').value=40;
+document.getElementById('rate').value=75;document.getElementById('revision').value=2500;
+document.getElementById('modules').value=12;document.getElementById('languages').value=4;calc();}
+calc();
+</script></body></html>
