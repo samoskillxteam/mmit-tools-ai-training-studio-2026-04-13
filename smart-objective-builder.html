@@ -1,9 +1,8 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>SMART Objective Builder — MMIT</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>*{box-sizing:border-box;margin:0;padding:0}body{background:#1a1a2e;font-family:'Inter',sans-serif;color:#fff;min-height:100vh;padding:20px}.container{max-width:680px;margin:0 auto}.mmit-header{text-align:center;padding:24px 0 20px;border-bottom:1px solid #3a3a5c;margin-bottom:24px}.mmit-logo{color:#f0c040;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.mmit-header h1{font-size:22px;font-weight:700;margin:8px 0 4px}.module-label{color:#aaaacc;font-size:13px}.mmit-footer{text-align:center;color:#aaaacc;font-size:13px;padding:24px 0;border-top:1px solid #3a3a5c;margin-top:24px}.card{background:#252545;border:1px solid #3a3a5c;border-radius:12px;padding:20px;margin-bottom:16px}.card h2{color:#f0c040;font-size:16px;font-weight:600;margin-bottom:4px}.card .sub{color:#aaaacc;font-size:13px;margin-bottom:14px}label{display:block;color:#aaaacc;font-size:14px;font-weight:500;margin-bottom:6px}input[type=text],select,textarea{width:100%;background:#1a1a2e;border:1px solid #3a3a5c;border-radius:8px;color:#fff;padding:10px 14px;font-size:15px;font-family:inherit;margin-bottom:14px}input:focus,select:focus,textarea:focus{outline:none;border-color:#f0c040}.err{border-color:#e05555 !important}.errtxt{color:#e05555;font-size:12px;margin:-10px 0 10px}.score{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}.pass{background:#4caf82;color:#1a1a2e}.fail{background:#3a3a5c;color:#aaaacc}.btn{background:#f0c040;color:#1a1a2e;border:none;border-radius:8px;padding:12px 24px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}.btn:hover{background:#ffd060}.result{background:#1a1a2e;border:2px solid #f0c040;border-radius:12px;padding:20px;margin:16px 0;display:none}.result-obj{color:#fff;font-size:16px;line-height:1.6;font-style:italic;margin:12px 0}</style></head>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}body{background:#000;font-family:'Plus Jakarta Sans',sans-serif;color:#fff;min-height:100vh;padding:20px;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:80px 80px}.container{max-width:680px;margin:0 auto}.mmit-header{text-align:center;padding:24px 0 20px;border-bottom:1px solid #606060;margin-bottom:24px}.mmit-logo{color:#f0c040;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.mmit-header h1{font-size:22px;font-weight:700;margin:8px 0 4px}.module-label{color:#aaaacc;font-size:13px}.mmit-footer{text-align:center;color:#aaaacc;font-size:13px;padding:24px 0;border-top:1px solid #606060;margin-top:24px}.card{background:#211f1f;border:1px solid #606060;border-radius:12px;padding:20px;margin-bottom:16px}.card h2{color:#f0c040;font-size:16px;font-weight:600;margin-bottom:4px}.card .sub{color:#aaaacc;font-size:13px;margin-bottom:14px}label{display:block;color:#aaaacc;font-size:14px;font-weight:500;margin-bottom:6px}input[type=text],select,textarea{width:100%;background:#0a0a0a;border:1px solid #606060;border-radius:8px;color:#fff;padding:10px 14px;font-size:15px;font-family:inherit;margin-bottom:14px}input:focus,select:focus,textarea:focus{outline:none;border-color:#f0c040}.err{border-color:#e05555!important}.errtxt{color:#e05555;font-size:12px;margin:-10px 0 10px}.score{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}.pass{background:#4caf82;color:#0a0a0a}.fail{background:#606060;color:#aaaacc}.btn{background:#f0c040;color:#0a0a0a;border:none;border-radius:8px;padding:12px 24px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}.btn:hover{background:#ffd060}.result{background:#0a0a0a;border:2px solid #f0c040;border-radius:12px;padding:20px;margin:16px 0;display:none}.result-obj{color:#fff;font-size:16px;line-height:1.6;font-style:italic;margin:12px 0}</style></head>
 <body><div class="container">
 <div class="mmit-header"><span class="mmit-logo">MMIT</span><h1>SMART Objective Builder</h1><p class="module-label">Module 3 — Instructional Design Meets AI</p></div>
-<div id="tool-content">
 <div class="card"><h2>S — Specific</h2><div class="sub">Name the exact behavior AND regulatory citation</div>
 <label>The learner will... (start with action verb: demonstrate, identify, execute, classify, diagnose, evaluate)</label>
 <textarea id="behavior" rows="2" placeholder="e.g., demonstrate correct Type-A extinguisher discharge technique" oninput="validate()"></textarea><div class="errtxt" id="e_behavior"></div>
@@ -33,52 +32,13 @@
 <div style="color:#f0c040;font-size:14px;font-weight:600;margin-bottom:8px">YOUR SMART OBJECTIVE</div>
 <div class="result-obj" id="objText"></div>
 <div style="color:#aaaacc;font-size:13px;margin-bottom:12px">Bloom's Level: <span id="objBlooms" style="color:#f0c040"></span></div>
-<button class="btn" onclick="copyObj()">Copy to Clipboard</button> <button class="btn" style="background:#3a3a5c;color:#fff" onclick="window.print()">Print</button>
-</div>
+<button class="btn" onclick="copyObj()">Copy to Clipboard</button> <button class="btn" style="background:#606060;color:#fff" onclick="window.print()">Print</button>
 </div>
 <div class="mmit-footer">Part of The AI Training Studio — Available on Whop · mmit</div>
 </div>
 <script>
-const actionVerbs=['demonstrate','identify','execute','classify','diagnose','evaluate','apply','analyze','design','judge','select','differentiate','compare','construct','implement','perform'];
-const citationPat=/(\d+\s*CFR|OPS\s*[\d.]+|Part\s*\d+|NFPA|OSHA|HIPAA|FINRA|EASA|FAA|ISO\s*\d+|§)/i;
-function validate(){
-  let score=0;const b=document.getElementById('behavior').value.trim();
-  const c=document.getElementById('citation').value.trim();
-  const m=document.getElementById('measurable').value.trim();
-  const l=document.getElementById('level').value;const j=document.getElementById('job').value.trim();
-  const con=document.getElementById('consequence').value.trim();const t=document.getElementById('timeframe').value;
-  // S
-  const hasVerb=actionVerbs.some(v=>b.toLowerCase().startsWith(v));
-  document.getElementById('e_behavior').textContent=b&&!hasVerb?'Start with an action verb (demonstrate, identify, execute...)':'';
-  document.getElementById('e_citation').textContent=c&&!citationPat.test(c)?'Include a regulatory reference (e.g., 45 CFR, EASA OPS, NFPA)':'';
-  if(b&&hasVerb&&c&&citationPat.test(c))score++;
-  // M
-  document.getElementById('e_measurable').textContent=m&&m.length<10?'Be more specific about the observable criterion':'';
-  if(m&&m.length>=10)score++;
-  // A
-  if(l)score++;
-  // R
-  if(j&&con)score++;
-  // T
-  if(t)score++;
-  const tag=document.getElementById('scoreTag');
-  tag.textContent='SMART Score: '+score+'/5';
-  tag.className='score '+(score>=5?'pass':'fail');
-}
-function generate(){
-  const b=document.getElementById('behavior').value.trim();
-  const c=document.getElementById('citation').value.trim();
-  const m=document.getElementById('measurable').value.trim();
-  const j=document.getElementById('job').value.trim();
-  const t=document.getElementById('timeframe').value;
-  const bl=document.getElementById('blooms').value;
-  if(!b||!c||!m||!t){alert('Complete all required fields first.');return;}
-  const obj=`"The learner will ${b}, as measured by ${m}, relevant to ${j||'the stated job function'}, consistent with ${c}, ${t.toLowerCase()}."`;
-  document.getElementById('objText').textContent=obj;
-  document.getElementById('objBlooms').textContent=bl||'Not selected';
-  document.getElementById('resultBox').style.display='block';
-  document.getElementById('resultBox').scrollIntoView({behavior:'smooth'});
-}
-function copyObj(){navigator.clipboard.writeText(document.getElementById('objText').textContent);alert('Copied to clipboard!');}
-validate();
+const actionVerbs=['demonstrate','identify','execute','classify','diagnose','evaluate','apply','analyze','design','judge','select','differentiate','compare','construct','implement','perform'];const citationPat=/(\d+\s*CFR|OPS\s*[\d.]+|Part\s*\d+|NFPA|OSHA|HIPAA|FINRA|EASA|FAA|ISO\s*\d+|§)/i;
+function validate(){let score=0;const b=document.getElementById('behavior').value.trim();const c=document.getElementById('citation').value.trim();const m=document.getElementById('measurable').value.trim();const l=document.getElementById('level').value;const j=document.getElementById('job').value.trim();const con=document.getElementById('consequence').value.trim();const t=document.getElementById('timeframe').value;const hasVerb=actionVerbs.some(v=>b.toLowerCase().startsWith(v));document.getElementById('e_behavior').textContent=b&&!hasVerb?'Start with an action verb (demonstrate, identify, execute...)':'';document.getElementById('e_citation').textContent=c&&!citationPat.test(c)?'Include a regulatory reference (e.g., 45 CFR, EASA OPS, NFPA)':'';if(b&&hasVerb&&c&&citationPat.test(c))score++;document.getElementById('e_measurable').textContent=m&&m.length<10?'Be more specific about the observable criterion':'';if(m&&m.length>=10)score++;if(l)score++;if(j&&con)score++;if(t)score++;const tag=document.getElementById('scoreTag');tag.textContent='SMART Score: '+score+'/5';tag.className='score '+(score>=5?'pass':'fail');}
+function generate(){const b=document.getElementById('behavior').value.trim();const c=document.getElementById('citation').value.trim();const m=document.getElementById('measurable').value.trim();const j=document.getElementById('job').value.trim();const t=document.getElementById('timeframe').value;const bl=document.getElementById('blooms').value;if(!b||!c||!m||!t){alert('Complete all required fields first.');return;}const obj=`"The learner will ${b}, as measured by ${m}, relevant to ${j||'the stated job function'}, consistent with ${c}, ${t.toLowerCase()}."`;document.getElementById('objText').textContent=obj;document.getElementById('objBlooms').textContent=bl||'Not selected';document.getElementById('resultBox').style.display='block';document.getElementById('resultBox').scrollIntoView({behavior:'smooth'});}
+function copyObj(){navigator.clipboard.writeText(document.getElementById('objText').textContent);alert('Copied!');}validate();
 </script></body></html>

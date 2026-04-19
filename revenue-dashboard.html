@@ -1,9 +1,8 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>90-Day Revenue Dashboard — MMIT</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>*{box-sizing:border-box;margin:0;padding:0}body{background:#1a1a2e;font-family:'Inter',sans-serif;color:#fff;min-height:100vh;padding:20px}.container{max-width:720px;margin:0 auto}.mmit-header{text-align:center;padding:24px 0 20px;border-bottom:1px solid #3a3a5c;margin-bottom:24px}.mmit-logo{color:#f0c040;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.mmit-header h1{font-size:22px;font-weight:700;margin:8px 0 4px}.module-label{color:#aaaacc;font-size:13px}.mmit-footer{text-align:center;color:#aaaacc;font-size:13px;padding:24px 0;border-top:1px solid #3a3a5c;margin-top:24px}.card{background:#252545;border:1px solid #3a3a5c;border-radius:12px;padding:20px;margin-bottom:16px}.card h2{color:#f0c040;font-size:16px;font-weight:600;margin-bottom:12px}.card h3{color:#fff;font-size:15px;font-weight:600;margin:16px 0 8px;padding-top:12px;border-top:1px solid #3a3a5c}label{display:block;color:#aaaacc;font-size:14px;font-weight:500;margin-bottom:6px}input[type=number],select{width:100%;background:#1a1a2e;border:1px solid #3a3a5c;border-radius:8px;color:#fff;padding:10px 14px;font-size:15px;font-family:inherit;margin-bottom:14px}input:focus,select:focus{outline:none;border-color:#f0c040}.ci{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(58,58,92,.5)}.ci:last-child{border-bottom:none}.ci input[type=checkbox]{width:18px;height:18px;accent-color:#f0c040;flex-shrink:0;margin-top:2px}.ci label{font-size:14px;margin-bottom:0}.ci.done label{text-decoration:line-through;color:#aaaacc}.pb{background:#3a3a5c;border-radius:8px;height:10px;margin:8px 0;overflow:hidden}.pf{background:#f0c040;height:100%;border-radius:8px;transition:width .3s}.revenue-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}.rev-card{background:#1a1a2e;border:1px solid #3a3a5c;border-radius:8px;padding:14px;text-align:center}.rev-card .rv{color:#f0c040;font-size:24px;font-weight:700}.rev-card .rl{color:#aaaacc;font-size:12px;margin-top:4px}.total-card{background:#1a1a2e;border:2px solid #f0c040;border-radius:12px;padding:20px;text-align:center;margin:16px 0}.total-card .rv{color:#f0c040;font-size:40px;font-weight:700}.total-card .rl{color:#aaaacc;font-size:14px;margin-top:4px}.btn{display:inline-block;background:#f0c040;color:#1a1a2e;border:none;border-radius:8px;padding:12px 24px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;margin:4px}.btn:hover{background:#ffd060}.btn-s{background:#3a3a5c;color:#fff}.btn-s:hover{background:#4a4a6c}.wk-toggle{background:none;border:none;color:#f0c040;cursor:pointer;font-size:13px;font-family:inherit;padding:4px 8px}</style></head>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}body{background:#000;font-family:'Plus Jakarta Sans',sans-serif;color:#fff;min-height:100vh;padding:20px;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:80px 80px}.container{max-width:720px;margin:0 auto}.mmit-header{text-align:center;padding:24px 0 20px;border-bottom:1px solid #606060;margin-bottom:24px}.mmit-logo{color:#f0c040;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.mmit-header h1{font-size:22px;font-weight:700;margin:8px 0 4px}.module-label{color:#aaaacc;font-size:13px}.mmit-footer{text-align:center;color:#aaaacc;font-size:13px;padding:24px 0;border-top:1px solid #606060;margin-top:24px}.card{background:#211f1f;border:1px solid #606060;border-radius:12px;padding:20px;margin-bottom:16px}.card h2{color:#f0c040;font-size:16px;font-weight:600;margin-bottom:12px}label{display:block;color:#aaaacc;font-size:14px;font-weight:500;margin-bottom:6px}input[type=number],select{width:100%;background:#0a0a0a;border:1px solid #606060;border-radius:8px;color:#fff;padding:10px 14px;font-size:15px;font-family:inherit;margin-bottom:14px}input:focus,select:focus{outline:none;border-color:#f0c040}.ci{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(96,96,96,.5)}.ci:last-child{border-bottom:none}.ci input[type=checkbox]{width:18px;height:18px;accent-color:#f0c040;flex-shrink:0;margin-top:2px}.ci label{font-size:14px;margin-bottom:0}.ci.done label{text-decoration:line-through;color:#aaaacc}.pb{background:#606060;border-radius:8px;height:10px;margin:8px 0;overflow:hidden}.pf{background:#f0c040;height:100%;border-radius:8px;transition:width .3s}.revenue-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}.rev-card{background:#0a0a0a;border:1px solid #606060;border-radius:8px;padding:14px;text-align:center}.rev-card .rv{color:#f0c040;font-size:24px;font-weight:700}.rev-card .rl{color:#aaaacc;font-size:12px;margin-top:4px}.total-card{background:#0a0a0a;border:2px solid #f0c040;border-radius:12px;padding:20px;text-align:center;margin:16px 0}.total-card .rv{color:#f0c040;font-size:40px;font-weight:700}.total-card .rl{color:#aaaacc;font-size:14px;margin-top:4px}.btn{display:inline-block;background:#f0c040;color:#0a0a0a;border:none;border-radius:8px;padding:12px 24px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;margin:4px}.btn:hover{background:#ffd060}.btn-s{background:#606060;color:#fff}.btn-s:hover{background:#777}</style></head>
 <body><div class="container">
 <div class="mmit-header"><span class="mmit-logo">MMIT</span><h1>90-Day Revenue Dashboard</h1><p class="module-label">Module 6 — Automation & Scale</p></div>
-<div id="tool-content">
 <div class="card"><h2>📊 Configuration</h2>
 <label>Target monthly revenue ($)</label><input type="number" id="target" value="10000" oninput="save();updateRevenue()">
 <label>Target industries</label>
@@ -18,76 +17,19 @@
 </div>
 <div id="weeks"></div>
 <div style="text-align:center;margin:16px 0"><button class="btn" onclick="exportProgress()">Export Progress Report</button> <button class="btn btn-s" onclick="resetAll()">Reset All</button></div>
-</div>
 <div class="mmit-footer">Part of The AI Training Studio — Available on Whop · mmit</div>
 </div>
 <script>
 const KEY='mmit-revenue-dashboard';
-const WEEKS=[
-{wk:1,title:'Audience Foundation',items:['LinkedIn profile rewritten with compliance training headline','LinkedIn banner updated with ROI stat','Featured section added with free resource link','Published 3 LinkedIn posts this week','Joined 3 industry LinkedIn groups','Produced 3-minute demo module']},
-{wk:2,title:'Audience Foundation (cont.)',items:['3 more LinkedIn posts (cost comparison)','Engaged with 10 target prospect posts','Tool stack fully configured and tested']},
-{wk:3,title:'Lead Magnet Launch',items:['ROI Calculator built and deployed','Lead magnet posted on LinkedIn 3+ times','Email list configured (ConvertKit/Beehiiv)','5-email welcome sequence written']},
-{wk:4,title:'Lead Magnet (cont.)',items:['25+ email subscribers acquired','ATD group posts with lead magnet','Aviation/industry LinkedIn group posts']},
-{wk:5,title:'Content Momentum',items:['"6-question SME interview" post published','YouTube Short #1 published','10 prospect outreach DMs sent']},
-{wk:6,title:'Content Momentum (cont.)',items:['"SCORM 1.2 for aviation" authority post','YouTube Short #2 published','10 more prospect outreach DMs']},
-{wk:7,title:'First Pilot Client',items:['"SEP module in 18 days" case study post','YouTube Short #3 published','Pilot conversation initiated with 3 prospects']},
-{wk:8,title:'First Pilot (cont.)',items:['First pilot contract signed ($1,200–$1,500)','Make.com workflow post published','YouTube Short #4 published']},
-{wk:9,title:'Pre-Launch Sequence',items:['Course waitlist announced on LinkedIn','Early-bird landing page live ($697)','5-email sales funnel activated','Pilot case study one-pager published']},
-{wk:10,title:'Pre-Launch (cont.)',items:['Email list at 300+ subscribers','Daily LinkedIn posts throughout week','Objection handling responses prepared']},
-{wk:11,title:'Launch Week (Days 1–3)',items:['Enrollment email sent (Email 4 — Offer)','Enrollment open announcement on LinkedIn','48-hour early-bird pricing active','Day 2 YouTube Short launched']},
-{wk:12,title:'Launch Week (Days 4–7)',items:['Email 5 (Last Chance) sent Day 5','Daily LinkedIn enrollment posts','Launch closed Day 7','Total launch revenue documented']}
-];
+const WEEKS=[{wk:1,title:'Audience Foundation',items:['LinkedIn profile rewritten with compliance training headline','LinkedIn banner updated with ROI stat','Featured section added with free resource link','Published 3 LinkedIn posts this week','Joined 3 industry LinkedIn groups','Produced 3-minute demo module']},{wk:2,title:'Audience Foundation (cont.)',items:['3 more LinkedIn posts (cost comparison)','Engaged with 10 target prospect posts','Tool stack fully configured and tested']},{wk:3,title:'Lead Magnet Launch',items:['ROI Calculator built and deployed','Lead magnet posted on LinkedIn 3+ times','Email list configured (ConvertKit/Beehiiv)','5-email welcome sequence written']},{wk:4,title:'Lead Magnet (cont.)',items:['25+ email subscribers acquired','ATD group posts with lead magnet','Aviation/industry LinkedIn group posts']},{wk:5,title:'Content Momentum',items:['"6-question SME interview" post published','YouTube Short #1 published','10 prospect outreach DMs sent']},{wk:6,title:'Content Momentum (cont.)',items:['"SCORM 1.2 for aviation" authority post','YouTube Short #2 published','10 more prospect outreach DMs']},{wk:7,title:'First Pilot Client',items:['"SEP module in 18 days" case study post','YouTube Short #3 published','Pilot conversation initiated with 3 prospects']},{wk:8,title:'First Pilot (cont.)',items:['First pilot contract signed ($1,200–$1,500)','Make.com workflow post published','YouTube Short #4 published']},{wk:9,title:'Pre-Launch Sequence',items:['Course waitlist announced on LinkedIn','Early-bird landing page live ($697)','5-email sales funnel activated','Pilot case study one-pager published']},{wk:10,title:'Pre-Launch (cont.)',items:['Email list at 300+ subscribers','Daily LinkedIn posts throughout week','Objection handling responses prepared']},{wk:11,title:'Launch Week (Days 1–3)',items:['Enrollment email sent (Email 4 — Offer)','Enrollment open announcement on LinkedIn','48-hour early-bird pricing active','Day 2 YouTube Short launched']},{wk:12,title:'Launch Week (Days 4–7)',items:['Email 5 (Last Chance) sent Day 5','Daily LinkedIn enrollment posts','Launch closed Day 7','Total launch revenue documented']}];
 let state=JSON.parse(localStorage.getItem(KEY)||'{}');
 function fmt(n){return '$'+Math.round(n).toLocaleString('en-US')}
-function save(){
-  state.r1=+document.getElementById('r1').value||0;state.r2=+document.getElementById('r2').value||0;
-  state.r3=+document.getElementById('r3').value||0;state.r4=+document.getElementById('r4').value||0;
-  state.target=+document.getElementById('target').value||10000;
-  state.industry=document.getElementById('industry').value;
-  localStorage.setItem(KEY,JSON.stringify(state));
-}
-function updateRevenue(){
-  const r1=+document.getElementById('r1').value||0,r2=+document.getElementById('r2').value||0,
-  r3=+document.getElementById('r3').value||0,r4=+document.getElementById('r4').value||0;
-  const total=r1+r2+r3+r4;const target=+document.getElementById('target').value||10000;
-  document.getElementById('rv1').textContent=fmt(r1);document.getElementById('rv2').textContent=fmt(r2);
-  document.getElementById('rv3').textContent=fmt(r3);document.getElementById('rv4').textContent=fmt(r4);
-  document.getElementById('totalMRR').textContent=fmt(total);
-  document.getElementById('mainBar').style.width=Math.min(100,Math.round(total/target*100))+'%';
-}
-function renderWeeks(){const el=document.getElementById('weeks');el.innerHTML='';
-WEEKS.forEach(wk=>{const div=document.createElement('div');div.className='card';
-const checked=wk.items.filter((_,i)=>!!state['w'+wk.wk+'_'+i]).length;
-const pct=Math.round(checked/wk.items.length*100);
-let html=`<h2 style="display:flex;justify-content:space-between;align-items:center">
-<span>Week ${wk.wk}: ${wk.title}</span><span style="font-size:13px;color:${pct===100?'#4caf82':'#aaaacc'}">${pct}%</span></h2>
-<div class="pb"><div class="pf" style="width:${pct}%"></div></div>`;
-wk.items.forEach((txt,i)=>{const k='w'+wk.wk+'_'+i;const done=!!state[k];
-html+=`<div class="ci${done?' done':''}"><input type="checkbox" id="${k}" ${done?'checked':''} onchange="toggleWk('${k}')"><label for="${k}">${txt}</label></div>`;});
-div.innerHTML=html;el.appendChild(div);});}
+function save(){state.r1=+document.getElementById('r1').value||0;state.r2=+document.getElementById('r2').value||0;state.r3=+document.getElementById('r3').value||0;state.r4=+document.getElementById('r4').value||0;state.target=+document.getElementById('target').value||10000;state.industry=document.getElementById('industry').value;localStorage.setItem(KEY,JSON.stringify(state));}
+function updateRevenue(){const r1=+document.getElementById('r1').value||0,r2=+document.getElementById('r2').value||0,r3=+document.getElementById('r3').value||0,r4=+document.getElementById('r4').value||0;const total=r1+r2+r3+r4;const target=+document.getElementById('target').value||10000;document.getElementById('rv1').textContent=fmt(r1);document.getElementById('rv2').textContent=fmt(r2);document.getElementById('rv3').textContent=fmt(r3);document.getElementById('rv4').textContent=fmt(r4);document.getElementById('totalMRR').textContent=fmt(total);document.getElementById('mainBar').style.width=Math.min(100,Math.round(total/target*100))+'%';}
+function renderWeeks(){const el=document.getElementById('weeks');el.innerHTML='';WEEKS.forEach(wk=>{const div=document.createElement('div');div.className='card';const checked=wk.items.filter((_,i)=>!!state['w'+wk.wk+'_'+i]).length;const pct=Math.round(checked/wk.items.length*100);let html=`<h2 style="display:flex;justify-content:space-between;align-items:center"><span>Week ${wk.wk}: ${wk.title}</span><span style="font-size:13px;color:${pct===100?'#4caf82':'#aaaacc'}">${pct}%</span></h2><div class="pb"><div class="pf" style="width:${pct}%"></div></div>`;wk.items.forEach((txt,i)=>{const k='w'+wk.wk+'_'+i;const done=!!state[k];html+=`<div class="ci${done?' done':''}"><input type="checkbox" id="${k}" ${done?'checked':''} onchange="toggleWk('${k}')"><label for="${k}">${txt}</label></div>`;});div.innerHTML=html;el.appendChild(div);});}
 function toggleWk(k){state[k]=!state[k];if(!state[k])delete state[k];localStorage.setItem(KEY,JSON.stringify(state));renderWeeks();}
-function resetAll(){if(confirm('Reset all dashboard progress?')){state={};localStorage.removeItem(KEY);
-document.getElementById('r1').value=0;document.getElementById('r2').value=0;
-document.getElementById('r3').value=0;document.getElementById('r4').value=0;
-document.getElementById('target').value=10000;updateRevenue();renderWeeks();}}
-function exportProgress(){let txt='MMIT 90-Day Revenue Dashboard — Progress Export\n'+new Date().toISOString()+'\n\n';
-txt+='REVENUE STREAMS\n';txt+='Course Sales: '+fmt(+document.getElementById('r1').value||0)+'\n';
-txt+='Production Services: '+fmt(+document.getElementById('r2').value||0)+'\n';
-txt+='Maintenance Subs: '+fmt(+document.getElementById('r3').value||0)+'\n';
-txt+='Template Licensing: '+fmt(+document.getElementById('r4').value||0)+'\n';
-const total=(+document.getElementById('r1').value||0)+(+document.getElementById('r2').value||0)+
-(+document.getElementById('r3').value||0)+(+document.getElementById('r4').value||0);
-txt+='TOTAL MRR: '+fmt(total)+'\n\n';
-WEEKS.forEach(wk=>{txt+='Week '+wk.wk+': '+wk.title+'\n';
-wk.items.forEach((item,i)=>{txt+=(state['w'+wk.wk+'_'+i]?'[✓]':'[ ]')+' '+item+'\n';});txt+='\n';});
-const b=new Blob([txt],{type:'text/plain'});const a=document.createElement('a');
-a.href=URL.createObjectURL(b);a.download='revenue-dashboard-export.txt';a.click();}
-// Load saved state
-if(state.r1)document.getElementById('r1').value=state.r1;
-if(state.r2)document.getElementById('r2').value=state.r2;
-if(state.r3)document.getElementById('r3').value=state.r3;
-if(state.r4)document.getElementById('r4').value=state.r4;
-if(state.target)document.getElementById('target').value=state.target;
-if(state.industry)document.getElementById('industry').value=state.industry;
+function resetAll(){if(confirm('Reset all dashboard progress?')){state={};localStorage.removeItem(KEY);document.getElementById('r1').value=0;document.getElementById('r2').value=0;document.getElementById('r3').value=0;document.getElementById('r4').value=0;document.getElementById('target').value=10000;updateRevenue();renderWeeks();}}
+function exportProgress(){let txt='MMIT 90-Day Revenue Dashboard — Progress Export\n'+new Date().toISOString()+'\n\n';txt+='REVENUE STREAMS\n';txt+='Course Sales: '+fmt(+document.getElementById('r1').value||0)+'\n';txt+='Production Services: '+fmt(+document.getElementById('r2').value||0)+'\n';txt+='Maintenance Subs: '+fmt(+document.getElementById('r3').value||0)+'\n';txt+='Template Licensing: '+fmt(+document.getElementById('r4').value||0)+'\n';const total=(+document.getElementById('r1').value||0)+(+document.getElementById('r2').value||0)+(+document.getElementById('r3').value||0)+(+document.getElementById('r4').value||0);txt+='TOTAL MRR: '+fmt(total)+'\n\n';WEEKS.forEach(wk=>{txt+='Week '+wk.wk+': '+wk.title+'\n';wk.items.forEach((item,i)=>{txt+=(state['w'+wk.wk+'_'+i]?'[✓]':'[ ]')+' '+item+'\n';});txt+='\n';});const b=new Blob([txt],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='revenue-dashboard-export.txt';a.click();}
+if(state.r1)document.getElementById('r1').value=state.r1;if(state.r2)document.getElementById('r2').value=state.r2;if(state.r3)document.getElementById('r3').value=state.r3;if(state.r4)document.getElementById('r4').value=state.r4;if(state.target)document.getElementById('target').value=state.target;if(state.industry)document.getElementById('industry').value=state.industry;
 updateRevenue();renderWeeks();
 </script></body></html>
